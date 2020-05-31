@@ -49,7 +49,7 @@ L_main0:
 	BRA NZ	L_main0
 	DEC	W8
 	BRA NZ	L_main0
-;Send_receive_over_uart.c,33 :: 		UART1_Write_Text("String Receive/Send V1.0");
+;Send_receive_over_uart.c,33 :: 		UART1_Write_Text("String Receive/Send V1.1");
 	MOV	#lo_addr(?lstr1_Send_receive_over_uart), W10
 	CALL	_UART1_Write_Text
 ;Send_receive_over_uart.c,35 :: 		while (1) {
@@ -125,7 +125,7 @@ L_main11:
 	BRA Z	L__main22
 	GOTO	L_main13
 L__main22:
-;Send_receive_over_uart.c,69 :: 		" **********************************************************/\r\n", Get_Fosc_kHz() / 1000.);
+;Send_receive_over_uart.c,71 :: 		" **********************************************************/\r\n", Get_Fosc_kHz() / 1000.);
 	CALL	_Get_Fosc_kHz
 	CALL	__Long2Float
 	MOV	#0, W2
@@ -137,29 +137,29 @@ L__main22:
 ;Send_receive_over_uart.c,50 :: 		PrintOut(PrintHandler, "/**********************************************************\r\n"
 	MOV	#lo_addr(_PrintHandler), W0
 	PUSH	W0
-;Send_receive_over_uart.c,69 :: 		" **********************************************************/\r\n", Get_Fosc_kHz() / 1000.);
+;Send_receive_over_uart.c,71 :: 		" **********************************************************/\r\n", Get_Fosc_kHz() / 1000.);
 	CALL	_PrintOut
 	SUB	#8, W15
-;Send_receive_over_uart.c,70 :: 		} else {
+;Send_receive_over_uart.c,72 :: 		} else {
 	GOTO	L_main14
 L_main13:
-;Send_receive_over_uart.c,71 :: 		uart1_write_text("Unrecognized command: "); //Failed to recognize.
+;Send_receive_over_uart.c,73 :: 		uart1_write_text("Unrecognized command: "); //Failed to recognize.
 	MOV	#lo_addr(?lstr8_Send_receive_over_uart), W10
 	CALL	_UART1_Write_Text
-;Send_receive_over_uart.c,72 :: 		uart_write_text(input); //output failed command.
+;Send_receive_over_uart.c,74 :: 		uart_write_text(input); //output failed command.
 	MOV	#lo_addr(_input), W10
 	CALL	_UART_Write_Text
-;Send_receive_over_uart.c,73 :: 		}
+;Send_receive_over_uart.c,75 :: 		}
 L_main14:
 L_main12:
 L_main10:
 L_main8:
 L_main6:
-;Send_receive_over_uart.c,74 :: 		}
-L_main4:
-;Send_receive_over_uart.c,75 :: 		}
-	GOTO	L_main2
 ;Send_receive_over_uart.c,76 :: 		}
+L_main4:
+;Send_receive_over_uart.c,77 :: 		}
+	GOTO	L_main2
+;Send_receive_over_uart.c,78 :: 		}
 L_end_main:
 	POP	W12
 	POP	W11

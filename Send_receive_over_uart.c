@@ -30,7 +30,7 @@ void main() {
   Delay_ms(100); // Wait for UART module to stabilize
 
   //Display message on start device.
-  UART1_Write_Text("String Receive/Send V1.0");
+  UART1_Write_Text("String Receive/Send V1.1");
   //always run, otherwise we will only execute once.
   while (1) {
     //if there is data do something.
@@ -53,16 +53,18 @@ void main() {
           " * Created by:\r\n"
           "     Tariq Dinmohamed.\r\n"
           " * Revision History:\r\n"
-          "     20200531:\r\n"
+          "     20200531-16:00:\r\n"
           "       - Initial release\r\n"
+          "     20200531-16:52:\r\n"
+          "       - Removed // from help menu.\r\n"
           " * Description:\r\n"
           "     Simple demonstration on receiving strings an using them as commands\r\n"
           " * Test configuration:\r\n"
           "     MCU:             P24FJ128GA306\r\n"
           "     Oscillator:      HS, 32MHz\r\n"
           " * Commands:\r\n"
-          "     command1 - //without spaces of capitalization.\r\n"
-          "     Command2 - //with capitalization.\r\n"
+          "     command1 - without spaces of capitalization.\r\n"
+          "     Command2 - with capitalization.\r\n"
           "     command 3 - with spaces.\r\n"
           "     Command 4 - with capitalization & spaces. \r\n"
           "     Help - What you're seeing\r\n"
