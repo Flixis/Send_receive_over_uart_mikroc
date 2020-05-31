@@ -4,7 +4,10 @@ Send and receive over uart mikroc, using strings.
 ## usage
 Write "help" to a Uart terminal. No caps.
 
-# Software
+![Usage](usage.png)
+
+
+## Software
 - MikroC for dsPic
 ## libs used
 - C_string
