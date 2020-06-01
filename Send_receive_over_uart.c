@@ -10,6 +10,10 @@ char command3[14] = "command 3"; //with spaces.
 char command4[14] = "Command 4"; //with capitalization & spaces.
 char commandhelp[5] = "help"; //Help command.
 
+//version control
+char Version[] = "V1.2\r\n";
+char CompileDate[] = __DATE__;
+
 //Used for printout lib
 void PrintHandler(char c) {
 
@@ -28,9 +32,12 @@ void main() {
   //Load uart1
   UART1_Init(9600); // Initialize UART module at 9600 bps
   Delay_ms(100); // Wait for UART module to stabilize
+  UART1_Write_Text("\r\n");
 
   //Display message on start device.
-  UART1_Write_Text("String Receive/Send V1.1");
+  UART1_Write_Text(Version);
+  UART1_Write_Text(CompileDate);
+  UART1_Write_Text("\r\n");
   //always run, otherwise we will only execute once.
   while (1) {
     //if there is data do something.
